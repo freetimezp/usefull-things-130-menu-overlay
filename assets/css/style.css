@@ -48,6 +48,7 @@ nav {
 
 .menu-open-btn {
     cursor: pointer;
+    color: #fff;
 }
 
 h1.header {
@@ -66,11 +67,12 @@ h1.header {
     padding: 2em;
     background: var(--color-menu-overlay);
     pointer-events: none;
-    /* clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); */
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 .menu-close-btn {
     cursor: pointer;
+    color: #fff;
 }
 
 .menu-nav {
@@ -90,7 +92,7 @@ h1.header {
 }
 
 .video {
-    width: 50%;
+    width: 80%;
 }
 
 .video-preview {
@@ -99,6 +101,11 @@ h1.header {
     background: url(../images/man.jpg) 50% 50% no-repeat;
     background-size: cover;
     border-radius: 4px;
+}
+
+.video-preview img {
+    width: 100%;
+    object-fit: cover;
 }
 
 .video-details {
@@ -131,7 +138,7 @@ h1.header {
     transition: all .3s;
 }
 
-.menu-link:hover .menu-link::after {
+.menu-link:hover::after {
     width: 100%;
 }
 
@@ -163,8 +170,12 @@ h1.header {
     z-index: -1;
 }
 
+.btn:hover::before {
+    width: 100%;
+}
+
 .btn:hover a {
-    color: var(--color-menu-overlay);
+    color: #000;
 }
 
 .btn:hover .btn::before {
@@ -200,6 +211,9 @@ h1.header {
 
 
 @media (max-width: 900px) {
+    h1.header {
+        font-size: 80px;
+    }
     .menu-overlay {
         height: 100vh;
     }
