@@ -1,33 +1,43 @@
-
 document.addEventListener("DOMContentLoaded", function () {
     let tl = gsap.timeline({ paused: true });
 
     tl.to(".menu-overlay", {
-        duration: 1,
+        duration: 1.2,
         clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-        ease: "power2.out"
+        ease: "power2.out",
     });
 
-    tl.from(".menu-link, .btn", {
-        opacity: 0,
-        y: 60,
-        stagger: 0.05,
-        duration: 0.75,
-        ease: "power1.inOut"
-    }, "<");
+    tl.from(
+        ".menu-link, .btn",
+        {
+            opacity: 0,
+            y: 60,
+            stagger: 0.05,
+            duration: 0.75,
+            ease: "power1.inOut",
+        },
+        "<"
+    );
 
-    tl.to(".video-preview", {
-        duration: 1,
-        height: "350px",
-        ease: "power2.out"
-    }, "<");
+    tl.to(
+        ".video-preview",
+        {
+            duration: 1,
+            height: "350px",
+            ease: "power2.out",
+        },
+        "<"
+    );
 
-    tl.to(".menu-divider", {
-        duration: 2,
-        width: "100%",
-        ease: "power4.out"
-    }, "<");
-
+    tl.to(
+        ".menu-divider",
+        {
+            duration: 2,
+            width: "100%",
+            ease: "power4.out",
+        },
+        "<"
+    );
 
     function openMenu() {
         document.querySelector(".menu-overlay").style.pointerEvents = "all";
@@ -44,21 +54,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
     tl.reverse();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
